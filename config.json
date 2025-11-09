@@ -1,0 +1,32 @@
+{
+  "name": "GHP mm2mqtt",
+  "version": "1.0.0",
+  "slug": "ghp_mm2mqtt",
+  "description": "Считывает данные с USB локальная версия",
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "panel_icon": "mdi:chip",
+  "panel_title": "GHP mm2mqtt",
+  "build": true,
+  "ingress": false,
+  "arch": ["aarch64", "armv7", "amd64", "i386"],
+  "host_network": true,
+  "devices": ["/dev/ttyUSB0:/dev/ttyUSB0:rwm"],
+  "options": {
+    "MQTT_BROKER": "homeassistant",
+    "MQTT_PORT": 1883,
+    "MQTT_USERNAME": "celiv",
+    "MQTT_PASSWORD": "230960",
+    "SERIAL_PORT": "/dev/ttyUSB0"
+  },
+  "schema": {
+    "MQTT_BROKER": "str",
+    "MQTT_PORT": "int",
+    "MQTT_USERNAME": "str",
+    "MQTT_PASSWORD": "str",
+    "SERIAL_PORT": "str"
+  },
+  "logo": "logo.png",
+  "icon": "icon.png"
+}
